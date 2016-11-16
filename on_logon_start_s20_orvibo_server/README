@@ -1,0 +1,264 @@
+#*************************************************************************
+#  Copyright (C) 2015 by Fernando M. Silva   fcr@netcabo.pt                
+#*************************************************************************
+
+Last update: 13 May 2016
+
+SUMMARY:
+  This software implements a web interface to control Orvibo S20 
+  sockets/switches attached to the local network. Screen shots of the 
+  interface are available in the web_screenshot*.png available in the
+  root directory of this distribution; you may check/see them in github 
+  without downloading them.
+
+DISCLAIMER:
+   This software was developed independently and it is not
+   supported or endorsed in any way by Orvibo (C).
+
+ACKNOWLEDGMENTS:
+    This software was based on the information originally published 
+    by Andrius Štikonas on 
+
+https://stikonas.eu/wordpress/2015/02/24/reverse-engineering-orvibo-s20-socket/	
+
+    and on comments and discussions by many other users, 
+    as well as some complementar reverse engineering 
+    analysis (see TECHNICAL_DATA.txt).
+
+DESCRIPTION:
+  The S20 switches can be operated  in the local network using the freely
+  available WiWo app. However, the WiWo  behavior when the user is outside
+  the local network is less convenient. Only switch on and switch off
+  operations are remotely supported, and remote operations often fail due to
+  timeout. In fact, remote operations through the WiWo app use a remote 
+  Orvibo proxy, in order to overcome NAT constraints,  which is often 
+  out of service or possibly blocked(?). Moreover, the S20s  can not be 
+  operated from a regular desktop, since only IOS or Android apps are 
+  supplied by Orvibo.
+
+  The purpose of  this software is to setup a web interface, supporting 
+  the most relevant S20 actions (switch off/on, program of timers and countdown 
+  timers). The web interface is designed such that it may be operated from 
+  any web browser (desktop,smartphone or tablet). Furthermore, it reports 
+  accurately the satus of the S20s, something  the WiWo app often 
+  fail to do. By making this web server available over the Internet, 
+  it is possible the remote and fast  operation of the S20s independently 
+  of the Orvibo infrastructure.
+
+  The web server can be installed on any computer attached to the local 
+  network or on a cheap mini server (a Raspberry Pi, for example), 
+  provided that it supports a web server with php. 
+
+  This web interface is able to operate all S20 attached to the 
+  network.  All devices are automatically detected and, therefore, 
+  no configuration of individual devices is required. The web interface has 
+  a responsive behavior to changing viewport sizes, therefore being well 
+  suited to both desktops and smartphones. 
+  
+  The main screen divides the viewport in N horizontal buttons, 
+  each one labeled with the  name automatically retrieved from the 
+  connected S20s. Each button is shown in green or red according to the 
+  current S20 status (green = ON). Ocasionally, one of the buttons may
+  appear has gray. This means that the system put it in inactive mode
+  following a timeout in order to not   hamper / delay the operation of the	
+  remaining active devices. The timeout may result from a disconnected device 
+  or simply an undesired transient. In order to connect it again, just 
+  confirm that the device is pluged and connected to the network, and press the 
+  gray button. 
+
+  Examples of the web interface are available on files web_screenshot[xx].png.
+
+  See the SECURITY section  below for discussion of security issues.
+
+CONTENTS :
+The code contained herein includes the following directories:
+    lib/orvfms
+    -  a php library (orvfms.php) with a set of simple functions to 
+       discover S20 device attached to the local network and retrieve of 
+       S20 names, addresses and switch state. It also include functions to 
+       switch ON/OFF each device and timer reporting and programming.
+
+       This directory includes also a small utility library (util.php), 
+       a test program (test.php) for testing the library and local S20s,
+       and several auxiliary php files used by the main web 
+       page (index.php);
+
+    s20
+    -  A php page (index.php) that implements a web interface 
+       to monitor and control S20 sockets attached to the local 
+       network; 
+ 
+    css
+    - The css stylesheet (orvfms.css) used by index.php;
+
+    img
+    - Several icons used by the web interface
+
+TESTING THE CODE:
+
+Before installing this code on a web server, please test if the library 
+recognizes and is able to operate your S20s. For this purpose, run the 
+test script test.php available in the lib/orvfms directory from the 
+command line.  It looks for S20 devices connected to the local network, 
+retrieves relevant data and  dump all collected information in readble 
+format to the console.
+
+Moreover, it makes a full power on  / power off cycle to all your S20s and
+tests the timers with two 10 seconds countdowns cycles using a randomly 
+choosed device. PLEASE TAKE INTO  ACCOUNT POSSIBLE SAFETY ISSUES  of the 
+switching on/off cycle!  Unplug any devices or appliances that may be 
+affected by this test cycle before running test.php.
+
+In order to test this library from the command line, just open a  
+terminal or console and take the following steps: 
+
+1. Change the working directory (cd) to the lib/orvfms  directory;
+2. Check the file globals.php and please confirm (or update) the broadcast 
+   address. Unappily, there is no portable and "clean" way of finding it 
+   automatically in the general case, since the host may have more than one 
+   network interface. In many cases, the default setting (192.168.1.255)
+   will do the job, but please confirm your local address. It will probably 
+   be something similar to 192.168.X.255 with X=0 or X=1. In rare cases, 
+   X may took other values, or the broadcast may be something like 
+   172.16.XX.255 or 10.xx.xx.255.
+3. Check if there are  not appliances connected to the S20 sockets that may 
+  2 be affected by the power on/off cycle. Unplug any devices that may be 
+   affected be this test cycle. Each off/on cycle switches each S20 to
+   the oposite state for about 5/10 seconds (exact figures depend on the
+   number of S20s in the local network.		
+4. Just type in the command line:
+
+prompt> php-cgi test.php
+
+(or replace php-cgi with the name of your php interpreter).
+
+5. If you are running on Windows, and you get an error in "socket_create()", 
+please confim that you have the sockets module installed and enabled. You may 
+have to uncomment a line in php.ini (;extension=php_sockets.dll, just delete 
+the ";") and to be sure that php_sockets.dll is available. For more 
+information  check http://php.net/manual/en/sockets.installation.php 
+(thanks to Javier Ortiz for reporting this error).
+
+6. If no sockets are detected, check if all sockets are on-line and 
+assure that they they are not locked: 
+
+(check WiWo app -> select socket -> more -> advanced).
+
+The output is quite straightforward, and possibly you are immediately able
+to recognize most of it. You should also see/hear the usual switching on and 
+off of the nearby S20s.  An example of the output of this script is included 
+in the file orvfms/example.out.
+
+7. If you want to create and store scenes, edit also the line in globals.php
+         
+	 define("TMP_DIR",""); 
+   
+and define here an existing  permanent directory that can be *written* by your http server, 
+for example:
+    	
+	define("TMP_DIR","/mytmp");
+	
+
+When left with the default empty string, the code will store working data files,
+namely scene data, on the system default temporary directory. However, this directory
+may be erased due to system maintenance procedures or reboot operation, and 
+previously configured scenes configuration will be lost.
+
+
+INSTALLATION OF THE WEB PAGE:
+
+The details of the installation will depend slightly on your HTTP server 
+configuration and your own preferences. The main web page is located 
+in s20/index.php. If you untar/unzip the code directly under your web 
+server {DocumentRoot} directory, you will be able to access the page
+at http://localhost/s20/ (when the server is run in your local  host) 
+or under http://yourURL.yourDomain/s20/ (when running from some other 
+host). If you unzip/untar under {DocumentRoot}/mydir, the web page 
+will be accessible at http://localhost/mydir/s20/ (or 
+http://yourURL.yourDomain/mydir/s20/. If you follow this simple direct
+installation, evertyhing should work out of the box. Just take into
+account the initial directory and the URL that must be used to access
+the web page.
+
+If you want to costumize your directories, or if your web server 
+configuration requires a different setup, just move the index.php,  
+css/orvfms.css and  orvfms/lib/* to the directories that suit the local  
+hierarchy and configuration of your HTTP server. In this case, you need
+to  check/update in  index.php (1) the relative location of the orvfms 
+lib directory (2)  the relative location  of the css/orvfms.css file. 
+(3) Check/update the path of the img directory in css/orvfms.cs.
+These lines are well marked in index.php with "UPDATE THE PATH". 
+There are 7 paths to icon files that must be updated in the CSS file
+(yes, there should be  some way of avoiding such repetition in CSS files, 
+but this is only possible with a specific CSS pre-processor).
+
+In order to use the web server software, you may of course run  both the 
+server and the  browser in your desktop or laptop when you are connected 
+to the local network where the S20s are installed. However, in order to be 
+able to operate the S20s from any Internet location, the server must be 
+installed on a permanent host attached to the S20s network. For domestic 
+applications, a good option is to set up the server on a Raspberry 
+Pi, which can be kept powered on with minimal energy consumption and which 
+can be simultaneously used by other applications (e.g., media center). 
+Of course, if the server has a private address, as it usually happens in 
+domestic networks, it will be required to configure the home router with 
+Dynamic  DNS and to add an appropriate  port forwarding rule to the router. 
+These operations are router and network dependent and are beyond the scope 
+of this document.
+
+
+SECURITY:
+
+This web server does not offer any particular security against outside
+attacks. Please use it at your own risk.  If you intend to  operate it 
+from any Internet location, a simple counter measure to mitigate 
+the risk is to store the index.php below a directory with a code name 
+only known to you (e.g., [DocumentRoot]/s20_myPassCode/index.php) and  
+assure that the Document Root directory is not  readable. This option
+assumes that  there  are not many attackers knowing this software or 
+looking for the control of your home devices :-). This is possibly more 
+than enough for most cases, provided that the  devices are not "too risky". 
+Of course, this is not "real" security and it is vulnerable to eavesdropping.  
+If you want to setup standard security levels you will have to generate your own 
+[self signed] certificate, enable HTTPS on your server and setup an 
+.htaccess file with username/password permissions (or any other equivalent 
+option).
+
+OPERATION OF THE WEBPAGE:
+
+The operation is straightforward. 
+
+Just note that a countdown timer over the button in the bottom right corner 
+in red means  "time to switch off", in green "time to switch on", 
+and in white "time to switch off after switching on".
+
+At the bottom left corner are displayed the next scheduled switch operation in
+the day/weekly timers. As before, "off" events are displayed in red, "on" 
+events in green. You may adjust the number of displayed events in the setup page
+of each device, which may be reached from the top right corner of the 
+count down page or weekly timers page. The default number of 
+"next displayed events"  is 0, so you will not see any scheduled action by default.
+The setup page also enables to delete or rename a device.
+
+When there is a mismatch between server and socket timezone or DST mode, a yellow
+warning sign is displayed. Pressing this sign  redirects to the setup page,
+where is available an option to synchronize the socket and server.
+
+When adding new devices to your network, the new device may not appear at once. 
+In this case, just press the find icon in the top right corner. If the new devices 
+are not detected, Just confirm that they are unlocked in the WiWo application (in the
+WiWo select device -> advanced and check that the "lock" switch is off).
+
+CAVEATS AND LIMITATIONS:
+
+The web interface supplies most of the functions provided by the WiWo app.
+However, since the full technical information about the sockets is not
+disclosed, some technical details and checks may not be performed exactly
+as foresseen, and the operation may ocasionally fail. We expect to be able
+to improve this interface as more information becomes available.
+
+This software supports locked devices, but they must be unlocked at least 
+once in order to be found and registered. 
+
+
+

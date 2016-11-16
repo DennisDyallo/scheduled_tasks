@@ -1,0 +1,1 @@
+devcon restart "@USB\VID_1235&PID_800A\5&6B4DCFF&0&3"
