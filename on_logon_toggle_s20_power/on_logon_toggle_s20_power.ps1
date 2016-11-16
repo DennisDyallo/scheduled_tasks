@@ -1,18 +1,41 @@
-function ToggleS20Power(){
-	ToggleSpeakers
-	ToggleLights
+param($state)
+function TurnOnPower(){
+	TurnOnSpeakers
+	TurnOnLights
 }
 
-function ToggleSpeakers(){
+function TurnOffPower(){
+	TurnOffSpeakers
+	TurnOffLights
+}
+
+function TurnOnSpeakers(){
     #Speakers
-	$postParams = @{toMainPage = 'switchACCF2399591C'}
+	$postParams = @{toMainPage = 'setOnACCF2399591C'}
     Invoke-WebRequest -Uri http://192.168.0.15:8000/ -Method POST -Body $postParams
 }
 
-function ToggleLights(){
+function TurnOnLights(){
 	#Lights
-    $postParams = @{toMainPage = 'switchACCF2399582A'}
+    $postParams = @{toMainPage = 'setOnACCF2399582A'}
     Invoke-WebRequest -Uri http://192.168.0.15:8000/ -Method POST -Body $postParams
 }
 
-ToggleS20Power
+function TurnOffSpeakers(){
+    #Speakers
+	$postParams = @{toMainPage = 'setOffACCF2399591C'}
+    Invoke-WebRequest -Uri http://192.168.0.15:8000/ -Method POST -Body $postParams
+}
+
+function TurnOffLights(){
+	#Lights
+    $postParams = @{toMainPage = 'setOffACCF2399582A'}
+    Invoke-WebRequest -Uri http://192.168.0.15:8000/ -Method POST -Body $postParams
+}
+
+if($state -eq 1){
+	TurnOnPower
+}
+else{
+	TurnOffPower
+}
