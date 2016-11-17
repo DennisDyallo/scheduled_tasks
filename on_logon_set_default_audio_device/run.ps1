@@ -1,0 +1,1 @@
+Set-DefaultAudioDevice "Line Out (Scarlett 2i4 USB)"
