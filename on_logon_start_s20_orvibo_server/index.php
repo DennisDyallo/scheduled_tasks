@@ -222,7 +222,7 @@ else if(isset($_POST['toMainPage'])){
 			else if($actionValue=="setOn"){
 				$st = $s20Table[$mac]['st'];
 				if($st == 1) 
-					break;
+					return;
                 $newSt = actionAndCheck($mac,1,$s20Table);
                 $s20Table[$mac]['st']=$newSt;
                 $swVal = $s20Table[$mac]['switchOffTimer']; 
@@ -234,7 +234,7 @@ else if(isset($_POST['toMainPage'])){
 			else if($actionValue=="setOff"){
 				$st = $s20Table[$mac]['st'];
 				if($st == 0) 
-					break;
+					return;
                 $newSt = actionAndCheck($mac,0,$s20Table);
                 $s20Table[$mac]['st']=$newSt;
                 $swVal = $s20Table[$mac]['switchOffTimer']; 
