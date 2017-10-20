@@ -4,7 +4,7 @@ var gulp = require('gulp'),
 gulp.task('connect', function() {
     connect.server({
 		base: '.',
-		hostname: '192.168.0.15'
+		hostname: 'localhost'
 	});
 });
 
