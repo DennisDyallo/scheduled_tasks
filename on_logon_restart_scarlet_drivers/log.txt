@@ -1,0 +1,152 @@
+PCI\VEN_8086&DEV_8C22&SUBSYS_78171462&REV_04\3&11583659&0&FB: Intel(R) 8 Series/C220 Series SMBus Controller - 8C22
+ACPI\PNP0C01\1                                              : System board
+ACPI\PNP0C02\1                                              : Motherboard resources
+ACPI\PNP0C02\2                                              : Motherboard resources
+ACPI\INT3394\2&DABA3FF&0                                    : Intel(R) Extreme Tuning Utility Device Driver
+PCI\VEN_10DE&DEV_100C&SUBSYS_106610DE&REV_A1\4&1610F4F8&0&0008: NVIDIA GeForce GTX TITAN Black
+STORAGE\VOLUME\{18F50A21-97B1-11E6-8675-806E6F6E6963}#0000000000100000: Volume
+ACPI\INT0800\4&2E9D147B&0                                   : Legacy device
+SWD\MMDEVAPI\MIDII_7CF78F3C.P_0004                          : 2 - Scarlett 2i4 USB (1)
+SWD\MMDEVAPI\MIDII_7CF78F3C.P_0006                          : 2 - Scarlett 2i4 USB (1)
+ACPI\PNP0C0B\0                                              : ACPI Fan
+ACPI\PNP0C0B\1                                              : ACPI Fan
+ACPI\PNP0C0B\2                                              : ACPI Fan
+ACPI\PNP0C0B\3                                              : ACPI Fan
+ACPI\PNP0C0B\4                                              : ACPI Fan
+USB\VID_8087&PID_8000\5&18D2AB39&0&1                        : Generic USB Hub
+SWD\PRINTENUM\PRINTQUEUES                                   : Root Print Queue
+SWD\MMDEVAPI\{0.0.1.00000000}.{9BD0471E-A1C8-48EA-A228-429D61DBD3DF}: Line In (2- Scarlett 2i4 USB)
+HID\UVHID&COL02\1&2D595CA7&0&0001                           : HID-compliant vendor-defined device
+ROOT\VOLMGR\0000                                            : Volume Manager
+USB\VID_8087&PID_8008\5&1E892407&0&1                        : Generic USB Hub
+STORAGE\VOLUME\{F4CD7E09-96E6-11E6-866E-806E6F6E6963}#0000000000100000: Volume
+USB\VID_1038&PID_1361&MI_01\6&200F48E5&0&0001               : USB Input Device
+LPTENUM\MICROSOFTRAWPORT\5&754C130&0&LPT1                   : Printer Port Logical Interface
+SWD\RADIO\{11E9A489-26B8-4D86-B614-6B9D2644EFC5}            : Wi-Fi
+HID\VID_1038&PID_1361&MI_00&COL03\7&13F75B6B&0&0002         : HID-compliant consumer control device
+ROOT\BASICDISPLAY\0000                                      : Microsoft Basic Display Driver
+USB\VID_1235&PID_800A\5&6B4DCFF&0&1                         : Scarlett 2i4 USB
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_60_-_INTEL(R)_CORE(TM)_I7-4790K_CPU_@_4.00GHZ\_1: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_60_-_INTEL(R)_CORE(TM)_I7-4790K_CPU_@_4.00GHZ\_2: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_60_-_INTEL(R)_CORE(TM)_I7-4790K_CPU_@_4.00GHZ\_3: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_60_-_INTEL(R)_CORE(TM)_I7-4790K_CPU_@_4.00GHZ\_4: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_60_-_INTEL(R)_CORE(TM)_I7-4790K_CPU_@_4.00GHZ\_5: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_60_-_INTEL(R)_CORE(TM)_I7-4790K_CPU_@_4.00GHZ\_6: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_60_-_INTEL(R)_CORE(TM)_I7-4790K_CPU_@_4.00GHZ\_7: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+ACPI\GENUINEINTEL_-_INTEL64_FAMILY_6_MODEL_60_-_INTEL(R)_CORE(TM)_I7-4790K_CPU_@_4.00GHZ\_8: Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz
+ACPI\PNP0100\4&2E9D147B&0                                   : System timer
+SWD\IP_TUNNEL_VBUS\IP_TUNNEL_DEVICE_ROOT                    : Microsoft IPv4 IPv6 Transition Adapter Bus
+SWD\IP_TUNNEL_VBUS\TEREDO_TUNNEL_DEVICE                     : Teredo Tunneling Pseudo-Interface
+ACPI\THERMALZONE\TZ00                                       : ACPI Thermal Zone
+ACPI\THERMALZONE\TZ01                                       : ACPI Thermal Zone
+PCI\VEN_8086&DEV_8C02&SUBSYS_78171462&REV_04\3&11583659&0&FA: Intel(R) 8 Series/C220 Series SATA AHCI Controller - 8C02
+ACPI\PNP0C14\0                                              : Microsoft Windows Management Interface for ACPI
+HID\VID_046D&PID_C318&MI_01&COL01\7&1866FC&0&0000           : HID-compliant consumer control device
+SWD\MMDEVAPI\{0.0.0.00000000}.{70DAC04A-6098-4529-BD11-FAA5E3C308A8}: SAMSUNG-4 (NVIDIA High Definition Audio)
+ACPI\PNP0103\0                                              : High precision event timer
+ROOT\COMPOSITEBUS\0000                                      : Composite Bus Enumerator
+ROOT\VDRVROOT\0000                                          : Microsoft Virtual Drive Enumerator
+{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\VWIFIMP_WFD\5&2A08863C&0&11: Microsoft Wi-Fi Direct Virtual Adapter
+{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\VWIFIMP_WFD\5&2A08863C&0&12: Microsoft Wi-Fi Direct Virtual Adapter #2
+SWD\IP_TUNNEL_VBUS\ISATAP_0                                 : Microsoft ISATAP Adapter
+SWD\IP_TUNNEL_VBUS\ISATAP_1                                 : Microsoft ISATAP Adapter #2
+ROOT\SPACEPORT\0000                                         : Microsoft Storage Spaces Controller
+HID\UVHID&COL03\1&2D595CA7&0&0002                           : HID-compliant consumer control device
+USB\VID_046D&PID_C318\5&6B4DCFF&0&4                         : USB Composite Device
+PCI\VEN_8086&DEV_8C20&SUBSYS_F8171462&REV_04\3&11583659&0&D8: High Definition Audio Controller
+USB\VID_046D&PID_0990&MI_02\6&32F6DFA5&0&0002               : Pro 9000
+ACPI\PNP0501\1                                              : Communications Port (COM1)
+USB\ROOT_HUB20\4&2976CA52&0                                 : USB Root Hub
+ROOT\KDNIC\0000                                             : Microsoft Kernel Debug Network Adapter
+STORAGE\VOLUMESNAPSHOT\HARDDISKVOLUMESNAPSHOT1              : Generic volume shadow copy
+STORAGE\VOLUMESNAPSHOT\HARDDISKVOLUMESNAPSHOT2              : Generic volume shadow copy
+STORAGE\VOLUMESNAPSHOT\HARDDISKVOLUMESNAPSHOT3              : Generic volume shadow copy
+STORAGE\VOLUMESNAPSHOT\HARDDISKVOLUMESNAPSHOT4              : Generic volume shadow copy
+STORAGE\VOLUMESNAPSHOT\HARDDISKVOLUMESNAPSHOT5              : Generic volume shadow copy
+STORAGE\VOLUMESNAPSHOT\HARDDISKVOLUMESNAPSHOT6              : Generic volume shadow copy
+STORAGE\VOLUME\{F4CD7E08-96E6-11E6-866E-806E6F6E6963}#0000000000100000: Volume
+DISPLAY\BNQ7859\4&2139CB8&0&UID65793                        : Generic PnP Monitor
+STORAGE\VOLUME\{F4CD7E09-96E6-11E6-866E-806E6F6E6963}#0000003A1C800000: Volume
+HDAUDIO\FUNC_01&VEN_10DE&DEV_0044&SUBSYS_10DE1066&REV_1001\5&2B214B3A&0&0001: NVIDIA High Definition Audio
+PCI\VEN_8086&DEV_8C2D&SUBSYS_78171462&REV_04\3&11583659&0&D0: Intel(R) 8 Series/C220 Series USB EHCI #2 - 8C2D
+ROOT\FOCUSRITEUSB\0000                                      : USB Audio Root
+SWD\MMDEVAPI\{0.0.1.00000000}.{CF65165D-175E-4B21-828C-12850DF08C1A}: Stereo Mix (Realtek High Definition Audio)
+PCI\VEN_10EC&DEV_8168&SUBSYS_78171462&REV_0C\4&30CA9228&0&00E2: Realtek PCIe GBE Family Controller
+SWD\MMDEVAPI\{0.0.0.00000000}.{8CA17328-1527-4839-A373-425E9F860810}: Line Out (2- Scarlett 2i4 USB)
+HID\VID_1038&PID_1361&MI_01&COL01\7&156DA62D&0&0000         : HID Keyboard Device
+USB\VID_046D&PID_C318&MI_00\6&26C48876&0&0000               : USB Input Device
+SCSI\DISK&VEN_&PROD_ST1000DM003-1CH1\4&2814C571&0&000000    : ST1000DM003-1CH162
+USB\VID_09E8&PID_006B&MI_00\6&3F600F&0&0000                 : Akai MPK49
+USB\VID_09E8&PID_006B\5&6B4DCFF&0&9                         : USB Composite Device
+ROOT\UMBUS\0000                                             : UMBus Root Bus Enumerator
+PCI\VEN_8086&DEV_8C14&SUBSYS_78171462&REV_D4\3&11583659&0&E2: Intel(R) 8 Series/C220 Series PCI Express Root Port #3 - 8C14
+PCI\VEN_8086&DEV_244E&SUBSYS_78171462&REV_D4\3&11583659&0&E3: PCI-to-PCI Bridge
+SWD\RADIO\{3DB5895D-CC28-44B3-AD3D-6F01A782B8D2}            : Microsoft Radio Device Enumeration Bus
+SWD\MSDAS\{CE958E9A-424F-4C88-86F4-11314821E75A}            : Microsoft Device Association Root Enumerator
+ROOT\ACPI_HAL\0000                                          : ACPI x64-based PC
+HID\UVHID&COL04\1&2D595CA7&0&0003                           : HID Keyboard Device
+PCI\VEN_1814&DEV_5592&SUBSYS_851A1043&REV_00\4&1C6BF17D&0&00E5: ASUS PCE-N53  300Mbps 11n dual band Wireless PCI-E card
+ACPI\PNP0A08\0                                              : PCI Express Root Complex
+PCI\VEN_8086&DEV_0C01&SUBSYS_78171462&REV_06\3&11583659&0&08: Intel(R) Xeon(R) processor E3 - 1200 v3/4th Gen Core processor PCI Express x16 Controller - 0C01
+PCI\VEN_8086&DEV_8C26&SUBSYS_78171462&REV_04\3&11583659&0&E8: Intel(R) 8 Series/C220 Series USB EHCI #1 - 8C26
+HID\VID_046D&PID_C318&MI_01&COL02\7&1866FC&0&0001           : HID-compliant vendor-defined device
+USB\ROOT_HUB20\4&1EAC5A53&0                                 : USB Root Hub
+ACPI_HAL\PNP0C08\0                                          : Microsoft ACPI-Compliant System
+HTREE\ROOT\0
+ROOT\BASICRENDER\0000                                       : Microsoft Basic Render Driver
+ACPI\PNP0B00\4&2E9D147B&0                                   : System CMOS/real time clock
+ACPI\PNP0000\4&2E9D147B&0                                   : Programmable interrupt controller
+HID\VID_1038&PID_1361&MI_01&COL02\7&156DA62D&0&0001         : HID-compliant vendor-defined device
+USB\VID_046D&PID_C318&MI_01\6&26C48876&0&0001               : USB Input Device
+ACPI\FIXEDBUTTON\2&DABA3FF&0                                : ACPI Fixed Feature Button
+PCI\VEN_8086&DEV_8C1A&SUBSYS_78171462&REV_D4\3&11583659&0&E5: Intel(R) 8 Series/C220 Series PCI Express Root Port #6 - 8C1A
+HDAUDIO\FUNC_01&VEN_10EC&DEV_0887&SUBSYS_1462F817&REV_1003\4&24D843A3&0&0001: Realtek High Definition Audio
+SCSI\CDROM&VEN_ASUS&PROD_BW-16D1HT\4&2814C571&0&030000      : ASUS BW-16D1HT
+ACPI\PNP0C02\10                                             : Motherboard resources
+ACPI\INT3F0D\4&2E9D147B&0                                   : Motherboard resources
+DISPLAY\SAM0925\5&1C925B29&1&UID4353                        : Generic PnP Monitor
+ACPI\PNP0C14\MXM2                                           : Microsoft Windows Management Interface for ACPI
+HID\UVHID&COL05\1&2D595CA7&0&0004                           : HID-compliant mouse
+STORAGE\VOLUME\{F4CD7E08-96E6-11E6-866E-806E6F6E6963}#0000000006500000: Volume
+ACPI\INT33A0\0                                              : Intel(R) Smart Connect Technology Device
+SCSI\DISK&VEN_&PROD_ST1000DM003-1CH1\4&2814C571&0&010000    : ST1000DM003-1CH162
+ACPI\PNP0200\4&2E9D147B&0                                   : Direct memory access controller
+USB\ROOT_HUB30\4&558E005&0&0                                : USB Root Hub (xHCI)
+PCI\VEN_10DE&DEV_0E1A&SUBSYS_106610DE&REV_A1\4&1610F4F8&0&0108: High Definition Audio Controller
+HID\VID_1038&PID_1361&MI_00&COL01\7&13F75B6B&0&0000         : HID-compliant mouse
+SWD\MMDEVAPI\MICROSOFTGSWAVETABLESYNTH                      : Microsoft GS Wavetable Synth
+ACPI\PNP0C0C\AA                                             : ACPI Power Button
+HID\VID_046D&PID_C318&MI_00\7&23BED6C6&0&0000               : HID Keyboard Device
+SWD\MMDEVAPI\{0.0.1.00000000}.{8180CB5C-814D-4EE4-8082-896CA4C9A040}: Microphone (Pro 9000)
+DISPLAY\SAM0D0D\5&1C925B29&1&UID4352                        : Generic PnP Monitor
+USB\VID_046D&PID_0990\6754ECDD                              : Logitech USB Camera (Pro 9000)
+PCI\VEN_8086&DEV_8C31&SUBSYS_78171462&REV_04\3&11583659&0&A0: Intel(R) USB 3.0 eXtensible Host Controller - 1.0 (Microsoft)
+ROOT\NDISVIRTUALBUS\0000                                    : NDIS Virtual Network Adapter Enumerator
+ACPI\PNP0400\4&2E9D147B&0                                   : Printer Port (LPT1)
+ACPI\PNP0C02\111                                            : Motherboard resources
+PCI\VEN_8086&DEV_0412&SUBSYS_78171462&REV_06\3&11583659&0&10: Intel(R) HD Graphics 4600
+PCI\VEN_8086&DEV_8C3A&SUBSYS_78171462&REV_04\3&11583659&0&B0: Intel(R) Management Engine Interface 
+HID\UVHID&COL01\1&2D595CA7&0&0000                           : HID-compliant vendor-defined device
+USB\VID_1038&PID_1361\5&6B4DCFF&0&10                        : USB Composite Device
+PCI\VEN_8086&DEV_0C00&SUBSYS_78171462&REV_06\3&11583659&0&00: PCI standard host CPU bridge
+HID\UVHID&COL06\1&2D595CA7&0&0005                           : HID-compliant mouse
+SCSI\DISK&VEN_SAMSUNG&PROD_SSD_850_EVO_250G\4&2814C571&0&020000: Samsung SSD 850 EVO 250GB
+PCI\VEN_1B21&DEV_1080&SUBSYS_78171462&REV_03\4&27D41A71&0&00E3: PCI-to-PCI Bridge
+USB\VID_046D&PID_0990&MI_00\6&32F6DFA5&0&0000               : Logitech QuickCam Pro 9000
+ROOT\MSSMBIOS\0000                                          : Microsoft System Management BIOS Driver
+ACPI\PNP0C04\4&2E9D147B&0                                   : Numeric data processor
+SWD\MMDEVAPI\{0.0.0.00000000}.{91147850-1D05-458F-A88E-8ADE73274EF0}: S27E500-0 (NVIDIA High Definition Audio)
+USB\VID_1038&PID_1361&MI_00\6&200F48E5&0&0000               : SteelSeries Sensei Gaming Mouse
+PCI\VEN_8086&DEV_8C10&SUBSYS_78171462&REV_D4\3&11583659&0&E0: Intel(R) 8 Series/C220 Series PCI Express Root Port #1 - 8C10
+ROOT\SYSTEM\0000                                            : Plug and Play Software Device Enumerator
+ROOT\SYSTEM\0001                                            : SteelSeries Device Factory
+HID\VID_1038&PID_1361&MI_00&COL02\7&13F75B6B&0&0001         : HID Keyboard Device
+ROOT\HIDCLASS\0000                                          : Unified Virtual HID
+ROOT\RDPBUS\0000                                            : Remote Desktop Device Redirector Bus
+SWD\MMDEVAPI\MIDII_89C34B01.P_0000                          : 3 - Port 1
+SWD\MMDEVAPI\MIDII_89C34B01.P_0001                          : 3 - Port 2
+SWD\MMDEVAPI\MIDII_89C34B01.P_0002                          : 3 - Port 1
+SWD\MMDEVAPI\MIDII_89C34B01.P_0003                          : 3 - Port 2
+SWD\MMDEVAPI\MIDII_89C34B01.P_0004                          : 3 - Port 3
+PCI\VEN_8086&DEV_8C50&SUBSYS_78171462&REV_04\3&11583659&0&F8: Intel(R) B85 LPC Controller - 8C50
+151 matching device(s) found.

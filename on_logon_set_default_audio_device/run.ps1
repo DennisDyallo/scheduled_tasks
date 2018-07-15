@@ -3,8 +3,8 @@
 #Get-AudioDeviceList to get the name
 param($device)
 Write-Host $device;
-$IndexForScarlet = 1;
-$IndexForHDMI = 0;
+$IndexForScarlet = 'Focusrite USB (Focusrite USB Audio)';
+$IndexForHDMI = 'SAMSUNG *';
 
 if($device -eq 0){
     Set-DefaultAudioDevice $IndexForScarlet;
