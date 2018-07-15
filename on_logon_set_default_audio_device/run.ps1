@@ -2,15 +2,10 @@
 #Link: https://github.com/cdhunt/WindowsAudioDevice-Powershell-Cmdlet/blob/master/AudioDeviceCmdlets.zip
 #Get-AudioDeviceList to get the name
 param($device)
-Write-Host $device;
-$IndexForScarlet = 'Focusrite USB (Focusrite USB Audio)';
-$IndexForHDMI = 'SAMSUNG *';
 
-if($device -eq 0){
-    Set-DefaultAudioDevice $IndexForScarlet;
+
+function SetAudioDevice([string] $Device) {
+	Get-AudioDeviceList | ForEach-Object -Process {if ($_.DeviceFriendlyName -Match $Device){Set-DefaultAudioDevice $_.Index}}
 }
-elseif($device -eq 1){
-	Set-DefaultAudioDevice $IndexForHDMI;
-	
-}
-	
+
+SetAudioDevice $device

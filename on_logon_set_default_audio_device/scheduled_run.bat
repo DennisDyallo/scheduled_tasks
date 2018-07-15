@@ -4,4 +4,4 @@ for /f "tokens=*" %%a in ('C:\Windows\System32\WindowsPowerShell\v1.0\powershell
 SET LogName=set_default_audio_device_%Today%.log
 
 cd /d %ScriptRoot%
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell -NoProfile -ExecutionPolicy Bypass -Command "./run.ps1 0 -verbose >> %LogName% 2>&1"
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell -NoProfile -ExecutionPolicy Bypass -Command "./run.ps1 focusrite -verbose >> %LogName% 2>&1"
