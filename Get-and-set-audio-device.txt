@@ -1,0 +1,3 @@
+Get-AudioDeviceList | ForEach-Object -Process {if ($_.DeviceFriendlyName -Match 'Focusrite'){Set-DefaultAudioDevice $_.Index}}
+
+Get-AudioDeviceList | ForEach-Object -Process {if ($_.DeviceFriendlyName -Match 'Samsung'){Set-DefaultAudioDevice $_.Index}}
