@@ -1,7 +1,7 @@
 param($state)
 function TurnOnPower(){
 	TurnOnSpeakers
-	#TurnOnLights
+	TurnOnLights
 }
 
 function TurnOffPower(){
