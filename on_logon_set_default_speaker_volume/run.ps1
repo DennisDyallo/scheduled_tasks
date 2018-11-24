@@ -45,7 +45,7 @@ public class Audio {
 '@
 
 function SetDefaultVolume(){
-	[Audio]::Volume = 0.14;
+	[Audio]::Volume = 0.44;
 }
 
 SetDefaultVolume
