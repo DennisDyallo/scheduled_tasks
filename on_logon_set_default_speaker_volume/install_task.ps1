@@ -4,4 +4,4 @@ $taskSchedule = "ONSTART"
 
 "Setting up task: $taskName with $taskRun at schedule: $taskSchedule"
 
-& schtasks /create /tn $taskName /tr $taskRun /sc $taskSchedule /ru "System"
+& schtasks /create /tn $taskName /tr $taskRun /sc $taskSchedule /ru "System" /F

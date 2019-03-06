@@ -1,0 +1,6 @@
+Installera PHP
+Lägg till PHP i PATH
+Navigera till PHP-katalogin. 
+Byt namn på php.ini.development till php.ini
+Leta upp raden ";extension=sockets" och ta bort ";"
+Går även att läsa på rad 135 i README
