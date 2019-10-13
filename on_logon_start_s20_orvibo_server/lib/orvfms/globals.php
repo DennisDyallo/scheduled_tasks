@@ -53,8 +53,8 @@ define("ON" ,"0000000001");
 define("OFF","0000000000");
 define("ONT" ,"01");
 define("OFFT","00");
-define("MAX_RETRIES",20);
-define("TIMEOUT",0.3); // Max time to wait for a reply from S20, in seconds
+define("MAX_RETRIES",15);
+define("TIMEOUT",1); // Max time to wait for a reply from S20, in seconds
 define("MAGIC_KEY","6864");
 define("BUFFER_SIZE",500);
 define("WRITE_SOCKET_CODE","746D");

@@ -5,7 +5,7 @@ param($device)
 
 
 function SetAudioDevice([string] $Device) {
-	Get-AudioDeviceList | ForEach-Object -Process {if ($_.DeviceFriendlyName -Match $Device){Set-DefaultAudioDevice $_.Index}}
+	Get-AudioDevice -List | ForEach-Object -Process { if ($_.Name -Match $Device){Set-AudioDevice $_.Index}}
 }
 
 SetAudioDevice $device

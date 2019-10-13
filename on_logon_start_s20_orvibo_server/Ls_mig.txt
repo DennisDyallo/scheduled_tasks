@@ -4,3 +4,5 @@ Navigera till PHP-katalogin.
 Byt namn på php.ini.development till php.ini
 Leta upp raden ";extension=sockets" och ta bort ";"
 Går även att läsa på rad 135 i README
+
+C:\php\php.exe -S localhost:8000 -t C:\scheduled_tasks\on_logon_start_s20_orvibo_server
