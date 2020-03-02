@@ -22,8 +22,13 @@ function SetDeviceState([string] $Device, [string] $State){
 
 if($state -eq 1){
 
-	SetDeviceState "speakers" "On"
-	SetDeviceState "lights" "On"
+	if ((Get-Date).Hour -gt 23){
+		Write-Host "Sorry, it's to late."
+	}
+	else{
+		SetDeviceState "speakers" "On"
+		SetDeviceState "lights" "On"
+	}
 }
 else{
 	SetDeviceState "speakers" "Off"
